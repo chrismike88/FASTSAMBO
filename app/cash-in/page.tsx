@@ -47,11 +47,18 @@ export default async function HalamanCashIn() {
     },
     {
       kunci: "turun", judul: "Harus turun", num: true,
-      render: (t) => t.jenis_target === "PERTAHANKAN"
-        ? <span style={{ color: "var(--ink-muted)" }}>pertahankan</span>
-        : t.jenis_target === "BARU"
-          ? <span style={{ color: "var(--ink-muted)" }}>petugas baru</span>
-          : <span className="font-semibold text-red-600">{rupiahPenuh(t.harus_turun)}</span>,
+      // Bobot visualnya mengikuti besaran, bukan sekadar ada-tidaknya selisih:
+      // menandai merah Rp2.214 setebal Rp7,3 juta membuat tabel ini menyesatkan.
+      render: (t) => {
+        if (t.jenis_target === "PERTAHANKAN")
+          return <span style={{ color: "var(--ink-muted)" }}>pertahankan</span>;
+        if (t.jenis_target === "BARU")
+          return <span style={{ color: "var(--ink-muted)" }}>petugas baru</span>;
+        const bagian = t.harus_turun / Math.max(1, t.sisa_awal ?? 1);
+        return bagian >= 0.1
+          ? <span className="font-semibold text-red-600">{rupiahPenuh(t.harus_turun)}</span>
+          : <span style={{ color: "var(--ink-muted)" }}>{rupiahPenuh(t.harus_turun)} · pertahankan</span>;
+      },
     },
     { kunci: "rst", judul: "RST target", num: true, render: (t) => persen(t.rst_target) },
     { kunci: "catatan", judul: "Catatan", render: (t) => t.catatan },
