@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FASTSAMBO">
+  <rect width="64" height="64" rx="14" fill="#0B2E4F"/>
+  <!-- Batang naik: tunggakan yang menurun dibaca dari kiri ke kanan -->
+  <rect x="13" y="38" width="9" height="14" rx="2.5" fill="#3987e5"/>
+  <rect x="27.5" y="28" width="9" height="24" rx="2.5" fill="#3987e5"/>
+  <rect x="42" y="16" width="9" height="36" rx="2.5" fill="#eb6834"/>
+</svg>
