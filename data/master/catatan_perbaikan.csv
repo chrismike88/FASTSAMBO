@@ -1,0 +1,7 @@
+nomor,temuan,dampak,perbaikan,status
+1,"Slide Klasemen September menampilkan beban kerja (Rp185-349 juta) tapi diberi label Kinerja Terbaik / Perlu Evaluasi","Salah baca fatal — FADLI dan SAPRI terlihat buruk padahal terbaik","Ganti ke grafik RST, atau beri judul tegas Beban Kerja tanpa label kinerja",TERBUKA
+2,"Urutan batang pada grafik September tidak konsisten dengan nilainya (ZAINI 239,88 di bawah RIKO 207,66)",Kredibilitas data,Urutkan ulang secara descending,TERBUKA
+3,"Jumlah pelanggan 3 lembar: slide Rencana Aksi menyebut 39, slide Strategi menyebut 56",Angka target tidak sinkron,Gunakan 39 sesuai tabel 11 September,TERBUKA
+4,"Sisa Agustus: slide eksekutif Rp61,5 juta sedangkan grafik roadmap Rp61,8 juta",Selisih Rp300 ribu,Samakan ke Rp61.499.420,TERBUKA
+5,IBO masuk klasemen September padahal tidak ada di data,Pertanggungjawaban wilayah tidak jelas,"Konfirmasi status ke Nusa Daya, perbarui daftar petugas",TERBUKA
+6,"Subtotal bilman untuk pelanggan 2 lembar tertulis 137 lembar / Rp72.691.919, sedangkan penjumlahan baris per petugas menghasilkan 136 lembar / Rp71.452.860","Selisihnya persis 1 lembar senilai Rp1.239.059 — yaitu lembar 2 pada baris #N/A yang belum punya penanggung jawab, sehingga jumlah pelanggan berisiko terbaca 176 padahal yang punya petugas hanya 175","Pisahkan baris #N/A dari subtotal bilman. Gunakan 136 lembar untuk beban bilman dan tuntaskan 1 lembar sisanya lewat AKSI-1",TERBUKA

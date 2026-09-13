@@ -1,0 +1,6 @@
+kode,nama,bobot,definisi,target,arah
+RST,RST (Rasio Sisa Tunggakan),40,Sisa tunggakan akhir bulan dibagi beban tagihan bulan tersebut,1.64,MINIMUM
+ROLLOVER,Rollover rate,20,Jumlah pelanggan naik dari 1 ke 2 lembar dibagi total pelanggan,1.5,MINIMUM
+TUL601,Ketepatan TUL 6.01,20,Persentase invoice terantar dengan bukti FTO valid paling lambat tanggal 18,95,MAKSIMUM
+CASHIN,Cash-in dini,10,Persentase lembar lunas sebelum tanggal 20,85,MAKSIMUM
+PENERTIBAN,Efektivitas penertiban,10,Persentase pelanggan melunasi setelah surat peringatan,50,MAKSIMUM

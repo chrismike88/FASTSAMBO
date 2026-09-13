@@ -1,0 +1,30 @@
+{
+  "name": "fastsambo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FASTSAMBO — dashboard monitoring performa petugas bilman, pengantaran TUL 6.01, dan percepatan cash-in ULP Samboja",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "data": "python3 scripts/build_all.py",
+    "uji": "bash scripts/uji.sh"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.0"
+  }
+}

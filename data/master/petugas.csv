@@ -1,0 +1,12 @@
+kode,nama,status,aktif_dari,aktif_sampai,catatan
+AHMAD,AHMAD,AKTIF,2026-08-01,,Nol pelanggan rollover pada Agustus — praktik kerjanya dijadikan standar unit
+FADLI,FADLI,AKTIF,2026-08-01,,Nol pelanggan rollover dengan beban terbesar kedua se-ULP
+SAPRI,SAPRI,AKTIF,2026-08-01,,Rata-rata nilai bongkar tertinggi — indikasi menyasar pelanggan daya besar
+ADE,ADE,AKTIF,2026-08-01,,
+ZAINI,ZAINI,AKTIF,2026-08-01,,Nol eksekusi pemutusan pada Agustus padahal sisa tunggakan besar
+RIKO,RIKO,AKTIF,2026-08-01,,Nol eksekusi pemutusan pada Agustus padahal sisa tunggakan besar
+RIDO,RIDO,AKTIF,2026-08-01,,
+RIDA,RIDA,AKTIF,2026-08-01,,Memegang 12 dari 39 pelanggan 3 lembar — kandidat pemutusan permanen terbanyak
+REZA,REZA,AKTIF,2026-08-01,,Nilai macet terbesar September (Rp23,66 juta)
+IBO,IBO,PERLU_KONFIRMASI,2026-08-01,2026-08-31,Tidak muncul pada data 11 September — konfirmasi ke Nusa Daya: mutasi / pengunduran diri / salah entri
+DONNY,DONNY,AKTIF,2026-09-01,,Petugas baru pada data September; belum memiliki baseline Agustus

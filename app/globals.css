@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------
+   Token warna. Nilai terang didefinisikan di :root; nilai gelap
+   diulang pada dua cakupan — media query untuk setelan sistem, dan
+   [data-theme="dark"] agar tombol tema selalu menang.
+   Palet seri grafik sudah divalidasi (pemisahan buta warna & kontras).
+   ------------------------------------------------------------------ */
+:root {
+  color-scheme: light;
+  --plane:        #F1F5F9;
+  --surface:      #FFFFFF;
+  --surface-2:    #F8FAFC;
+  --ink:          #0B1F33;
+  --ink-2:        #475569;
+  --ink-muted:    #7C8798;
+  --line:         #E2E8F0;
+  --line-strong:  #CBD5E1;
+  --brand:        #0B2E4F;
+  --brand-2:      #123E68;
+  --on-brand:     #FFFFFF;
+
+  /* seri grafik */
+  --viz-1: #2a78d6;
+  --viz-2: #eb6834;
+  --viz-3: #1baf7a;
+  --viz-grid: #E1E0D9;
+  --viz-axis: #C3C2B7;
+  --viz-muted: #898781;
+
+  /* ramp sekuensial satu warna (biru) untuk peta panas */
+  --seq-1: #cde2fb; --seq-2: #9ec5f4; --seq-3: #6da7ec;
+  --seq-4: #3987e5; --seq-5: #256abf; --seq-6: #104281;
+
+  /* status — selalu didampingi label teks, tidak pernah warna saja */
+  --st-good:     #0ca30c;
+  --st-warning:  #fab219;
+  --st-serious:  #ec835a;
+  --st-critical: #d03b3b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --plane:       #070F18;
+    --surface:     #0D1B2A;
+    --surface-2:   #12243697;
+    --ink:         #F1F5F9;
+    --ink-2:       #B6C2D1;
+    --ink-muted:   #8797AA;
+    --line:        #1E3348;
+    --line-strong: #2A4761;
+    --brand:       #0A2135;
+    --brand-2:     #123E68;
+    --viz-1: #3987e5;
+    --viz-2: #d95926;
+    --viz-3: #199e70;
+    --viz-grid: #2C2C2A;
+    --viz-axis: #383835;
+    --viz-muted: #898781;
+    --seq-1: #104281; --seq-2: #184f95; --seq-3: #256abf;
+    --seq-4: #3987e5; --seq-5: #6da7ec; --seq-6: #9ec5f4;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --plane:       #070F18;
+  --surface:     #0D1B2A;
+  --surface-2:   #12243697;
+  --ink:         #F1F5F9;
+  --ink-2:       #B6C2D1;
+  --ink-muted:   #8797AA;
+  --line:        #1E3348;
+  --line-strong: #2A4761;
+  --brand:       #0A2135;
+  --brand-2:     #123E68;
+  --viz-1: #3987e5;
+  --viz-2: #d95926;
+  --viz-3: #199e70;
+  --viz-grid: #2C2C2A;
+  --viz-axis: #383835;
+  --viz-muted: #898781;
+  --seq-1: #104281; --seq-2: #184f95; --seq-3: #256abf;
+  --seq-4: #3987e5; --seq-5: #6da7ec; --seq-6: #9ec5f4;
+}
+
+body {
+  background: var(--plane);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .kartu {
+    min-width: 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 0.875rem;
+    box-shadow: 0 1px 2px rgb(6 26 46 / 0.05), 0 10px 28px -20px rgb(6 26 46 / 0.35);
+  }
+  .kartu-judul {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .angka-hero {
+    font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-variant-numeric: proportional-nums;
+  }
+  .tabel {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.8125rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .tabel thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--surface-2);
+    color: var(--ink-2);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    border-bottom: 1px solid var(--line-strong);
+    white-space: nowrap;
+  }
+  .tabel tbody td {
+    padding: 0.55rem 0.7rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .tabel tbody tr:hover td { background: var(--surface-2); }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .lencana {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    padding: 0.12rem 0.5rem; border-radius: 999px;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em;
+    white-space: nowrap; border: 1px solid transparent;
+  }
+  .gulir-x { overflow-x: auto; }
+}
+
+/* Recharts: buang garis fokus bawaan yang mengganggu */
+.recharts-wrapper:focus, .recharts-surface:focus { outline: none; }

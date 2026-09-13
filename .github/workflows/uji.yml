@@ -1,0 +1,41 @@
+name: Uji
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  basis-data:
+    name: Skema, konsistensi data, dan Row Level Security
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pasang PostgreSQL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql postgresql-client
+      - name: Bangun ulang data dari data/master/*.csv
+        run: python3 scripts/build_all.py
+      - name: Pastikan keluaran bangkitan tidak tertinggal dari sumbernya
+        run: |
+          if ! git diff --quiet -- lib/fallback/dataset.json supabase/migrations/*_seed.sql; then
+            echo "✗ Keluaran bangkitan tidak sama dengan hasil build dari data/master/*.csv."
+            echo "  Jalankan: python3 scripts/build_all.py — lalu ikutkan perubahannya di commit."
+            git diff --stat -- lib/fallback/dataset.json supabase/migrations/*_seed.sql
+            exit 1
+          fi
+      - name: Jalankan migrasi, uji konsistensi, dan uji RLS
+        run: bash scripts/uji.sh
+
+  aplikasi:
+    name: Build Next.js
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build

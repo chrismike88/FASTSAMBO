@@ -1,0 +1,6 @@
+kode,hambatan,mitigasi,penanggung_jawab
+H1,Program DTSEN menyita fokus petugas,"Ajukan ke Nusa Daya agar penugasan DTSEN tidak beririsan dengan tanggal 14-25. Kalau tidak bisa, minta tambahan personel sementara untuk 2 minggu kritis.",Manajer ULP
+H2,MLS defisit 400 MW / pemadaman bergilir,"Overlay jadwal pemadaman ke peta ArcGIS. Hindari penagihan dan pemutusan di zona yang sedang padam — sensitivitas sosialnya tinggi dan tingkat keberhasilannya rendah. Geser kunjungan ke H+1 setelah zona normal.",Supervisor + admin GIS
+H3,Pelanggan nelayan sulit ditemui,"Kelompokkan pelanggan nelayan dalam layer tersendiri, jadwalkan kunjungan sore atau malam saat pulang melaut. Tawarkan reminder WhatsApp dan link bayar sebagai substitusi kunjungan fisik.",Bilman wilayah pesisir
+H4,Rumah kosong / anjing galak,"Wajibkan pencatatan status kunjungan di Field Maps (Diterima / Dititip / Rumah Kosong / Tidak Aman). Status Rumah Kosong dua kali atau lebih dieskalasi ke penelusuran nomor telepon pemilik. Status Tidak Aman dikunjungi berdua, tidak sendirian.",Seluruh bilman
+H5,Sensitivitas sosial penagihan,"Pertahankan prinsip persuasif: rata-rata pelanggan diputus hanya Rp282.604 — mayoritas rumah tangga kecil. Tawarkan opsi cicilan atau keringanan sebelum pemutusan.",Manajer ULP

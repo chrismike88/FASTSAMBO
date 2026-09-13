@@ -1,0 +1,4 @@
+periode,segmen,nama_segmen,jumlah_lembar,nilai,lembar_1,lembar_2,nilai_2,keterangan
+2026-09,BILMAN,Tagihan yang ditagih petugas bilman,5743,2434686417,5568,136,71452860,"Tanggung jawab 10 petugas bilman. Angka 2 lembar dikoreksi dari 137/Rp72.691.919 menjadi 136/Rp71.452.860 — subtotal pada materi sumber ikut menghitung 1 lembar milik #N/A senilai Rp1.239.059"
+2026-09,AMR,AMR / Pelanggan Besar,71,3207529965,71,0,0,Rata-rata Rp45.2 juta per rekening — ditangani Tim Pelayanan Pelanggan Besar UP3 Balikpapan
+2026-09,NA,Belum termapping (#N/A),29,104740050,28,1,1239059,Belum memiliki petugas penanggung jawab — perlu spatial join ke wilayah kerja RBM

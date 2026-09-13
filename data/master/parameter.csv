@@ -1,0 +1,15 @@
+kunci,nilai,satuan,keterangan
+target_saldo_akhir_bulan,40000000,Rp,Batas maksimum sisa tunggakan akhir September 2026
+target_rst_unit,1.64,%,RST unit yang dibutuhkan agar saldo tembus di bawah Rp40 juta
+tanggal_dtsen,13,tanggal,Tanggal DTSen terbit — pengantaran TUL 6.01 dimulai sesudahnya
+tanggal_jatuh_tempo,20,tanggal,Jatuh tempo pembayaran rekening listrik
+tanggal_batas_antar,18,tanggal,Batas akhir pengantaran TUL 6.01 agar dihitung tepat waktu
+ambang_rst_sangat_baik,1.64,%,RST di bawah nilai ini dinilai Sangat Baik
+ambang_rst_cukup,3.00,%,RST di bawah nilai ini dinilai Cukup
+ambang_rst_evaluasi,4.20,%,RST di bawah nilai ini dinilai Perlu Evaluasi; di atasnya Perlu Atensi
+target_rollover,1.5,%,Batas maksimum pelanggan naik dari 1 ke 2 lembar
+target_ketepatan_tul,95,%,Invoice TUL 6.01 terantar dengan bukti FTO valid paling lambat tanggal 18
+target_cash_in_dini,85,%,Lembar lunas sebelum tanggal 20
+target_efektivitas_penertiban,50,%,Pelanggan melunasi setelah menerima surat peringatan
+jarak_validasi_maks,100,meter,Jarak titik foto FTO ke titik pelanggan termapping sebelum ditandai suspect
+minimal_penertiban_bulanan,1,pelanggan,Kewajiban eksekusi pemutusan per bulan bagi petugas dengan RST di atas 2 persen
